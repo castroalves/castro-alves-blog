@@ -1,9 +1,10 @@
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import moment from "moment";
+
 import Layout from "../../components/layout";
 import { getAllPostsIds, getPostData } from "../../lib/posts";
-import moment from "moment";
 
 const CodeBlock = ({ language, value }) => {
   return (
