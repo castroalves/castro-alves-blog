@@ -3,7 +3,7 @@ title: "Como publicar artigos direto do celular"
 date: "2020-12-10"
 ---
 
-Recentemente, comecei a estudar Next.js. 
+Recentemente, comecei a estudar [Next.js](https://nextjs.org/).
 
 O único jeito que me motiva para aprender algo é através de um projeto real, então decidi migrar meu site pessoal do Gatsby para o Next.
 
@@ -27,10 +27,10 @@ Para os artigos do meu site, estou usando arquivos estáticos escritos em Markdo
 
 Tudo o que eu preciso é:
 
-* Um aplicativo com suporte a Markdown
-* Um jeito de subir o arquivo para o repositório do meu site no GitHub
+- Um aplicativo com suporte a Markdown
+- Um jeito de subir o arquivo para o repositório do meu site no GitHub
 
-O aplicativo que estou usando é o [Simple Markdown](https://play.google.com/store/apps/details?id=com.wbrawner.simplemarkdown), disponível gratuitamente na Google Play. 
+O aplicativo que estou usando é o [Simple Markdown](https://play.google.com/store/apps/details?id=com.wbrawner.simplemarkdown), disponível gratuitamente na Google Play.
 
 Além de simples e leve, ele me permite visualizar o conteúdo já formatado antes de publicar. Assim, eu não preciso esperar a Vercel fazer o deploy do site pra ver como vai ficar o conteúdo.
 
@@ -39,4 +39,3 @@ Pra subir o arquivo, eu acesso o repositório no GitHub, copio e colo o conteúd
 Uma vez salvo, o processo de publicação é automático. Toda vez que eu atualizo o repositório, a Vercel identifica através de uma integração e executa o deploy.
 
 Simples assim!
-
