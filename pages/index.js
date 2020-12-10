@@ -34,8 +34,9 @@ export default function Home({ allPostsData, blogPosts }) {
           JavaScript, and WordPress.
         </p>
       </section>
+      <Posts posts={blogPosts} />
       <section className="mb-6">
-        <h2 className="text-4xl font-bold my-4">Blog Posts</h2>
+        <h2 className="text-4xl font-bold my-4">Other Articles</h2>
         <ul>
           {allPostsData.map(({ id, date, link, title }) => (
             <li key={id}>
@@ -48,7 +49,6 @@ export default function Home({ allPostsData, blogPosts }) {
           ))}
         </ul>
       </section>
-      <Posts posts={blogPosts} />
       <Projects />
     </Layout>
   );
