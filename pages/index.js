@@ -7,18 +7,20 @@ import { ExternalLink } from "heroicons-react";
 import Layout, { siteTitle } from "../components/layout";
 import Posts from "../components/posts";
 import Projects from "../components/projects";
-import { getBlastPosts } from "../lib/get-blog-posts";
+import { getBlastPosts, getSortedPostsData } from "../lib/get-blog-posts";
 
 export async function getStaticProps() {
   const allPostsData = await getBlastPosts();
+  const blogPosts = getSortedPostsData();
   return {
     props: {
       allPostsData,
+      blogPosts,
     },
   };
 }
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData, blogPosts }) {
   return (
     <Layout home>
       <Head>
@@ -49,7 +51,7 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
-      <Posts />
+      <Posts posts={blogPosts} />
       <Projects />
     </Layout>
   );
