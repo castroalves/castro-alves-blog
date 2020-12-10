@@ -1,5 +1,20 @@
 @tailwind base;
 
+@layer base {
+  a {
+    @apply text-blue-600;
+  }
+  a:hover {
+    @apply underline;
+  }
+  .main-content > p {
+    @apply mt-10 leading-normal;
+  }
+  .main-content > p:first-child {
+    @apply mt-6;
+  }
+}
+
 /* Write your own custom base styles here */
 
 /* Start purging... */

@@ -1,26 +1,14 @@
 import Link from "next/link";
 
-import utilStyles from "../styles/utils.module.css";
-
 export default function Posts() {
   const posts = [
     {
       id: 1,
-      title: "SSG SSR",
-      url: "/posts/ssg-ssr",
-    },
-    {
-      id: 2,
-      title: "Pre-rendering",
-      url: "/posts/pre-rendering",
-    },
-    {
-      id: 3,
       title: "Usando datas no Postman",
       url: "/posts/usando-datas-no-postman",
     },
     {
-      id: 4,
+      id: 2,
       title: "How to check WordPress user role in an Angular",
       url: "/posts/wordpress-user-role-angular",
     },

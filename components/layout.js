@@ -1,15 +1,12 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import styles from "./layout.module.css";
-import utilStyles from "../styles/utils.module.css";
-
 const name = "Cadu de Castro Alves";
 export const siteTitle = "Backend Developer @ nextbike";
 
 export default function Layout({ children, home }) {
   return (
-    <div className="container mx-auto">
+    <div className="flex flex-col">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
@@ -27,43 +24,81 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
+      <header className="flex flex-col p-8 justify-center">
         {home ? (
-          <>
+          <div className="flex flex-col text-center">
             <img
               src="/images/profile.jpg"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+              className="w-60 rounded-full mx-auto"
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
+            <h1 className="text-2xl font-bold py-4">{name}</h1>
+          </div>
         ) : (
-          <>
+          <div className="flex flex-col text-center">
             <Link href="/">
               <a>
                 <img
                   src="/images/profile.jpg"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+                  className="w-40 rounded-full mx-auto"
                   alt={name}
                 />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
+            <h2 className="text-2xl font-bold py-4">
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+                <a className="text-gray-900">{name}</a>
               </Link>
             </h2>
-          </>
+          </div>
         )}
-      </header>
-      <main className="text-xl text-gray-900">{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
+        <div className="social-links flex">
+          <ul className="w-1/2 mx-auto flex justify-center font-semibold">
+            <li>
+              <a
+                href="https://github.com/castroalves"
+                className="bg-gray-900 py-2 px-4 text-white rounded mr-2"
+                target="_blank"
+              >
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/castroalves"
+                className="bg-blue-400 py-2 px-4 text-white rounded mr-2"
+                target="_blank"
+              >
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://dev.to/castroalves"
+                className="bg-gray-600 py-2 px-4 text-white rounded"
+                target="_blank"
+              >
+                DEV
+              </a>
+            </li>
+          </ul>
         </div>
-      )}
+      </header>
+      <main className="sm:w-1/2 sm:mx-auto text-xl text-gray-900 leading-loose">
+        <div className="main-content">{children}</div>
+        {!home && (
+          <div className="text-left py-6">
+            <Link href="/">
+              <a className="bg-yellow-400 hover:bg-opacity-80 text-black font-semibold display-block py-2 px-4 rounded">
+                ← Back to home
+              </a>
+            </Link>
+          </div>
+        )}
+      </main>
+      <footer className="py-6 text-center font-semibold text-gray-700">
+        &copy; {new Date().getFullYear()} Cadu de Castro Alves
+      </footer>
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import utilStyles from "../styles/utils.module.css";
 
 export default function Projects() {
   const links = [
@@ -19,8 +18,8 @@ export default function Projects() {
   return (
     <section className="mb-6">
       <h2 className="text-4xl font-bold mb-4">Projects &amp; Experiments</h2>
-      <div className={utilStyles.section}>
-        <ul className={utilStyles.list}>
+      <div className="">
+        <ul className="">
           {links.map(({ id, title, link }) => (
             <li key={id}>
               <Link href={link}>

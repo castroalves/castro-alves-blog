@@ -7,7 +7,9 @@ This was published originally on [Stack Overflow](https://stackoverflow.com/ques
 
 You can pass in PHP data to JavaScript using [wp_localize_script](https://codex.wordpress.org/Function_Reference/wp_localize_script):
 
-```php:title=functions.php
+```php
+<?php
+
 function so61079973_enqueue_scripts() {
     // Register the script
     wp_register_script( 'your-script', 'path/to/myscript.js' );
@@ -30,6 +32,8 @@ function so61079973_enqueue_scripts() {
     wp_enqueue_script( 'your-script' );
 }
 add_action('wp_enqueue_scripts', 'so61079973_enqueue_scripts');
+
+?>
 ```
 
 Then, in the JavaScript, you can get the data by calling the `user_data` object:
