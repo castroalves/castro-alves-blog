@@ -5,21 +5,28 @@ import Link from "next/link";
 
 import Layout, { siteTitle } from "../components/layout";
 import Posts from "../components/posts";
+import DevPosts from "../components/dev-posts";
 import Projects from "../components/projects";
-import { getBlastPosts, getSortedPostsData } from "../lib/get-blog-posts";
+import {
+  getSortedPostsData,
+  getBlastPosts,
+  getDevPosts,
+} from "../lib/get-blog-posts";
 
 export async function getStaticProps() {
-  const allPostsData = await getBlastPosts();
+  const blastPosts = await getBlastPosts();
+  const devPosts = await getDevPosts();
   const blogPosts = getSortedPostsData();
   return {
     props: {
-      allPostsData,
+      blastPosts,
+      devPosts,
       blogPosts,
     },
   };
 }
 
-export default function Home({ allPostsData, blogPosts }) {
+export default function Home({ blastPosts, devPosts, blogPosts }) {
   return (
     <Layout home>
       <Head>
@@ -34,13 +41,18 @@ export default function Home({ allPostsData, blogPosts }) {
         </p>
       </section>
       <Posts posts={blogPosts} />
+      <DevPosts posts={devPosts} />
       <section className="mb-6">
         <h2 className="text-4xl font-bold my-4">Other Articles</h2>
         <ul>
-          {allPostsData.map(({ id, date, link, title }) => (
-            <li key={id}>
+          {blastPosts.map(({ guid, link, title }) => (
+            <li key={guid}>
               <Link href={link}>
-                <a target="_blank" className="text-blue-500 hover:underline">
+                <a
+                  target="_blank"
+                  title={title.rendered}
+                  className="text-blue-500 hover:underline"
+                >
                   {title.rendered}
                 </a>
               </Link>
