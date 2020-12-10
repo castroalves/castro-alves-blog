@@ -6,7 +6,7 @@ export const siteTitle = "Backend Developer @ nextbike";
 
 export default function Layout({ children, home }) {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col px-4">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
