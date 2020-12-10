@@ -12,6 +12,11 @@ export default function Posts() {
       title: "How to check WordPress user role in an Angular",
       url: "/posts/wordpress-user-role-angular",
     },
+    {
+      id: 3,
+      title: "Como publicar artigos direto do celular",
+      url: "/posts/como-publicar-artigos-direto-do-celular",
+    },
   ];
 
   return (
