@@ -2,7 +2,6 @@ import React from "react";
 
 import Head from "next/head";
 import Link from "next/link";
-import { ExternalLink } from "heroicons-react";
 
 import Layout, { siteTitle } from "../components/layout";
 import Posts from "../components/posts";
@@ -24,7 +23,7 @@ export default function Home({ allPostsData, blogPosts }) {
   return (
     <Layout home>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Cadu de Castro Alves</title>
       </Head>
       <section className="mb-6">
         <p>Hello!</p>

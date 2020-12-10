@@ -11,7 +11,6 @@ import Layout from "../../components/layout";
 import matter from "gray-matter";
 
 const CodeBlock = ({ language, value }) => {
-  console.log(language);
   return (
     <SyntaxHighlighter
       showLineNumbers={true}
@@ -30,7 +29,7 @@ function Post({ content, data }) {
   return (
     <Layout>
       <Head>
-        <title>{title}</title>
+        <title>{title} | Cadu de Castro Alves</title>
       </Head>
       <h2 className="text-5xl leading-tight font-bold mb-6">{title}</h2>
       <p className="font-semibold mb-2">{publishedOn}</p>
