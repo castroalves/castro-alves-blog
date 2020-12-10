@@ -40,11 +40,8 @@ export default function Home({ allPostsData, blogPosts }) {
           {allPostsData.map(({ id, date, link, title }) => (
             <li key={id}>
               <Link href={link}>
-                <a
-                  target="_blank"
-                  className="text-blue-500 hover:underline flex flex-row items-center"
-                >
-                  {title.rendered} <ExternalLink size={24} className="ml-1" />
+                <a target="_blank" className="text-blue-500 hover:underline">
+                  {title.rendered}
                 </a>
               </Link>
             </li>

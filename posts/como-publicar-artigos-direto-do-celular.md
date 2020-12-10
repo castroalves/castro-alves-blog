@@ -1,6 +1,7 @@
 ---
 title: "Como publicar artigos direto do celular"
 date: "2020-12-10"
+language: "pt"
 ---
 
 Recentemente, comecei a estudar [Next.js](https://nextjs.org/).

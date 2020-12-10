@@ -1,6 +1,7 @@
 ---
 title: "Usando datas no Postman"
 date: "2020-01-01"
+language: "pt"
 ---
 
 Esses dias, precisei testar uma API de pagamento no Postman para desenvolver uma integração na [nextbike](https://nextbike.com).

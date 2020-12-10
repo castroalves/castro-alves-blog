@@ -16,14 +16,14 @@
   .main-content > h2 {
     @apply text-3xl font-bold mt-10;
   }
-  .main-content > ul,
-  .main-content > ol {
+  .main-content ul,
+  .main-content ol {
     @apply list-inside mt-4 ml-4;
   }
-  .main-content > ul {
+  .main-content ul {
     @apply list-disc;
   }
-  .main-content > ol {
+  .main-content ol {
     @apply list-decimal;
   }
 }

@@ -1,6 +1,7 @@
 ---
 title: "How to check WordPress user role in an Angular application"
 date: "2020-04-07"
+language: "en"
 ---
 
 This was published originally on [Stack Overflow](https://stackoverflow.com/questions/61079973/how-to-check-user-role-from-wordpress-in-a-angular-application/61083406).
