@@ -17,7 +17,7 @@ export default function Projects() {
 
   return (
     <section className="mb-6">
-      <h2 className="text-4xl font-bold mb-4">Projects &amp; Experiments</h2>
+      <h2 className="text-4xl font-bold mb-4">Projects</h2>
       <div className="">
         <ul className="">
           {links.map(({ id, title, link }) => (
