@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 
 const name = "Cadu de Castro Alves";
-export const siteTitle = "Backend Developer @ nextbike";
+export const siteTitle = "Cadu de Castro Alves";
 
 export default function Layout({ children, home }) {
   return (
@@ -10,18 +10,20 @@ export default function Layout({ children, home }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
-        <link rel="icon" href="/images/favicon.png" />
+        <link rel="icon" href="/images/favicon-transparent.png" />
         <meta
           name="description"
-          content="Here you'll find articles about PHP, JavaScript, NodeJS, Next.js, etc."
+          content="PHP, JavaScript, and Web Development"
         />
         <meta
           property="og:image"
-          content={`https://og-image.now.sh/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+          content="https://og-image.now.sh/**castroalves.dev**.png?theme=dark&amp;md=1&amp;fontSize=150px&amp;images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-white-logo.svg&images=https%3A%2F%2Fcastroalves.dev%2Fimages%2Ffavicon.png"
         />
-        <meta name="og:title" content="castroalves.dev" />
+        <meta name="og:title" content={siteTitle} />
+        <meta
+          name="og:description"
+          content="PHP, JavaScript, and Web Development"
+        />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className="flex flex-col p-8 justify-center">
