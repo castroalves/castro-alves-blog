@@ -18,7 +18,7 @@ Além disso, eu já era familiarizado com a plataforma da Vercel, criadora do Ne
 
 A maior parte das ideias que eu tenho são quando estou ocioso. Seja jogando [Asphalt 9](https://play.google.com/store/apps/details?id=com.gameloft.android.ANMP.GloftA9HM), assistindo vídeos no YouTube, ou até mesmo vendo TV, elas sempre vem nessas horas.
 
-Só que pegar o notebook pra escrever não é lá tão prático. E como praticamente não largo, porquê não escrever diretamente nele?
+Só que pegar o notebook pra escrever não é lá tão prático. E como praticamente não largo o celular, porquê não escrever diretamente nele?
 
 Inclusive, esse artigo foi escrito nele! 😅
 
