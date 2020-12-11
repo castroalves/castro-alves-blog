@@ -27,7 +27,7 @@ De forma bem resumida, o processo é o seguinte:
 
 Para criar o pagamento na Stripe, usamos o seguinte código:
 
-```js
+```typescript
 const setupIntent = await stripe.setupIntents.create({
   customer_id: "cus_123456abcdef",
   metadata: {
@@ -40,7 +40,7 @@ const setupIntent = await stripe.setupIntents.create({
 
 Já no último passo, quando recebemos a notificação da Stripe no sistema de pagamento da nextbike, nós processamos os dados assim:
 
-```js
+```typescript
 const age: number = notificationData["metadata"]["customer_age"];
 const company: string = notificationData["metadata"]["customer_company"];
 const position: string = notificationData["metadata"]["customer_position"];
@@ -68,36 +68,35 @@ Isso não apenas garante que todos os dados sejam enviados corretamente, como a 
 
 Seguindo com nosso exemplo, usando **Type Alias** o código ficaria assim:
 
-```js
+```typescript
 type CreateSetupIntentType = {
-  customer_id: string,
+  customer_id: string;
   metadata: {
-    customer_age: number,
-    customer_company: string,
-    customer_position: string,
-  },
+    customer_age: number;
+    customer_company: string;
+    customer_position: string;
+  };
 };
 ```
 
 Ou assim, usando **Interface**:
 
-```js
-
-interface CreateSetupIntentInterface = {
-    customer_id: string,
-    metadata: {
-        customer_age: number,
-        customer_company: string,
-        customer_position: string
-    }
-};
+```typescript
+interface CreateSetupIntentInterface {
+  customer_id: string;
+  metadata: {
+    customer_age: number;
+    customer_company: string;
+    customer_position: string;
+  };
+}
 ```
 
 O próximo passo é declarar a variável que vai receber esses dados, passando pra ela o tipo de dado (ou interface) esperado.
 
 Então, seria assim:
 
-```js
+```typescript
 const createData: CreateSetupIntentType = {
   // ou const createData: CreateSetupIntentInterface
   customer_id: "cus_123456abcdef",
@@ -126,7 +125,7 @@ Se você já desenvolve em JavaScript, mas ainda não usa TypeScript, eu **super
 
 Não é tão complicado quanto parece, é muito mais seguro e produtivo, e te oferece uma série de vantagens que, infelizmente, o JavaScript não te dá.
 
-Mas se você ainda não conhece JavaScript, você também precisará aprendê-lo, talvez até antes de aprender TypeScript. Isso fica a seu critério.
+Mas se você ainda não conhece JavaScript, você também precisará aprendê-lo, talvez até antes de aprender TypeScript.
 
 ## Gostou?
 

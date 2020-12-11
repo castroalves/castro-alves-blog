@@ -26,6 +26,13 @@
   .main-content ol {
     @apply list-decimal;
   }
+  .main-content p > code,
+  .main-content pre > code {
+    @apply text-lg;
+  }
+  .main-content p > code {
+    @apply bg-gray-900 text-gray-50 py-1 px-2 rounded;
+  }
 }
 
 /* Write your own custom base styles here */
