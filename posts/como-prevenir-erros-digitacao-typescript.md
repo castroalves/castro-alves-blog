@@ -1,6 +1,7 @@
 ---
 title: "Como previnir erros de digitação (ou tipagem) no TypeScript"
 date: "2020-12-11"
+language: "pt"
 ---
 
 Quantas vezes você já perdeu HORAS tentando entender um bug e no final descobriu que foi um simples erro de digitação?
