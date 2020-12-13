@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 
 const name = "Cadu de Castro Alves";
 export const siteTitle = "Cadu de Castro Alves";
@@ -28,11 +29,13 @@ export default function Layout({ children, home }) {
       </Head>
       <header className="flex flex-col p-8 justify-center">
         {home ? (
-          <div className="flex flex-col text-center">
-            <img
+          <div className="text-center">
+            <Image
               src="/images/profile.jpg"
-              className="w-60 rounded-full mx-auto"
+              className="rounded-full"
               alt={name}
+              width="200"
+              height="200"
             />
             <h1 className="text-2xl font-bold py-4">{name}</h1>
           </div>
@@ -40,10 +43,12 @@ export default function Layout({ children, home }) {
           <div className="flex flex-col text-center">
             <Link href="/">
               <a>
-                <img
+                <Image
                   src="/images/profile.jpg"
                   className="w-40 rounded-full mx-auto"
                   alt={name}
+                  width="200"
+                  height="200"
                 />
               </a>
             </Link>
