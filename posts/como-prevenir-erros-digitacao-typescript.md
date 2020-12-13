@@ -109,7 +109,7 @@ const createData: CreateSetupIntentType = {
 const setupIntent = await stripe.setupIntents.create(createData);
 ```
 
-Só um detalhe aqui: embora pareça, [**Type Alias** e **Interface** são diferentes](https://pawelgrzybek.com/typescript-interface-vs-type/). Mas nesse exemplo, podemos usar qualquer um dos dois.
+Só um detalhe aqui: embora pareça, [**Type Alias** e **Interface** são diferentes](https://youtu.be/PMhd1ebCGl8). Mas nesse exemplo, podemos usar qualquer um dos dois.
 
 Observe, ainda, que além do nome de cada dado (`customer_id`, `customer_age`, etc), você também pode definir o tipo de dado que deverá ser passado (`number`, `string`, etc).
 
