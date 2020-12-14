@@ -45,8 +45,8 @@ export default function Home({ blastPosts, devPosts, blogPosts }) {
       <section className="mb-6">
         <h2 className="text-4xl font-bold my-4">Other Articles</h2>
         <ul>
-          {blastPosts.map(({ guid, link, title }) => (
-            <li key={guid}>
+          {blastPosts.map(({ id, link, title }) => (
+            <li key={id}>
               <Link href={link}>
                 <a
                   target="_blank"

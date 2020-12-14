@@ -34,8 +34,8 @@ export default function Layout({ children, home }) {
               src="/images/profile.jpg"
               className="rounded-full"
               alt={name}
-              width="200"
-              height="200"
+              width={200}
+              height={200}
             />
             <h1 className="text-2xl font-bold py-4">{name}</h1>
           </div>
@@ -47,8 +47,8 @@ export default function Layout({ children, home }) {
                   src="/images/profile.jpg"
                   className="w-40 rounded-full mx-auto"
                   alt={name}
-                  width="200"
-                  height="200"
+                  width={200}
+                  height={200}
                 />
               </a>
             </Link>
